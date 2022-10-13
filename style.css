@@ -1,0 +1,72 @@
+/* imports */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* body */
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, Helvetica Neue,Helvetica,sans-serif;
+    line-height: 1.5;
+    margin: 0% 20%;
+    -webkit-font-smoothing: antialiased; /* lissage des caractères */
+    -moz-osx-font-smoothing: grayscale; /* pour eviter la pixelisation  */
+}
+
+/*-- titres et textes */
+h1, .h1-like {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.centered {text-align: center;}
+.padded {padding: .8rem;}
+
+/*-- liens */
+a {
+   color: inherit;
+   text-decoration: none;
+ }
+
+ a:hover {text-decoration: underline!important;}
+
+/*-- media */
+img, video, audio {max-width: 100%;} /*pour eviter que les medias dépassent de la page*/
+
+.accueil {
+  height: 100vh;
+  min-height: 100%;
+  background-image:
+  linear-gradient(transparent 75%, rgba(0,0,0)),
+  url(media/pres.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* header */
+body > header {
+  /* margin: -10%; a reflechir*/
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+nav * {display: inline-block;}
+
+.social-media {color: pink}
+
+/* footer */
+body > footer {
+  background-color: #fff;
+  color: #737373;
+}
