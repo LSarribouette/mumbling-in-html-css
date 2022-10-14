@@ -14,10 +14,6 @@ body {
     margin: 0;
 }
 
-main {display: inline-block;}
-
-nav * {display: inline-block;}
-
 /*-- titres et textes */
 h1, .h1-like {
   font-size: 3rem;
@@ -49,53 +45,54 @@ a {
 /* MODULES */
 /* ------------------------------------------------------- */
 /*-- menu burger */
-/* [ON BIG SCREEN] */
-/* (A) WRAPPER */
 #hamnav {
-  width: 80%;
   background: #000;
-  margin: auto;
+}
+  #hamburger { display: none; }
+
+  #hamnav label {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+    #hamnav label:hover {
+      cursor: pointer;
+      background: #fff;
+      color: #000;
+    }
+
+/* VERTICAL MENU */
+#hamitems {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
 }
 
-/* (B) HORIZONTAL MENU ITEMS */
-#hamitems { display: flex; }
-#hamitems a {
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-#hamitems a:hover { background: darkcyan; }
-
-/* (C) HIDE HAMBURGER */
-#hamnav label, #hamburger { display: none; }
-
-/* [ON SMALL SCREENS] */
-@media screen and (max-width: 576px){
-  /* (A) BREAK INTO VERTICAL MENU */
   #hamitems a {
     box-sizing: border-box;
-    display: block;
-    width: 100%;
-    border-top: 1px solid #333;
+
   }
 
-  /* (B) SHOW HAMBURGER ICON */
-  #hamnav label {
-    display: inline-block;
-    color: white;
-    background: #a02620;
-    font-style: normal;
-    font-size: 1.2em;
-    padding: 10px;
-  }
+    #hamitems a:hover {
+      background: #fff;
+      color: #000;
+    }
 
-  /* (C) TOGGLE SHOW/HIDE MENU */
+/* TOGGLE SHOW/HIDE MENU */
   #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
+  #hamnav input:checked ~ #hamitems { display: grid; }
+
+@media (min-width: 576px) {
+  #hamnav label {display: none;}
+  #hamitems {
+    display: grid!important;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+  }
+
 }
+
 /* ------------------------------------------------------- */
 
 /*-- media */
@@ -105,12 +102,18 @@ img, video, audio {max-width: 100%;} /*pour eviter que les medias dépassent de 
 
 /*-- header */
 body > header {
-  background-color: #000;
   color: #fff;
-  margin: 0 0;
+  position: sticky;
+  top: 0;
 }
 
-.social-media {color: pink}
+  header > section {
+    display: grid;
+    grid-template-columns: auto 15%;
+    gap: 5px
+  }
+
+.social-media {color: pink!important;}
 
 /*-- footer */
 body > footer {
