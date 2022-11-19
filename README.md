@@ -6,4 +6,4 @@ L'objectif à long terme est de soutenir l'entreprise [Au Bois Tournant](https:/
 
 > Technologies : HTML5, CSS3, Atom IDE
 
-`D'ailleurs n'hésitez pas à aller voir ce que fait Jordan, ces créations sont tout simplement sublimes ! :)`
+`D'ailleurs n'hésitez pas à aller voir ce que fait Jordan, ses créations sont tout simplement sublimes ! :)`
